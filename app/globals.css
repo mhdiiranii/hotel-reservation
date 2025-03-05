@@ -2,20 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.effect-image {
+  background: linear-gradient(to right, rgba(255, 255, 255, 1) 17%, rgba(255, 255, 255, 0.6) 22%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.6) 78%, rgba(255, 255, 255, 1) 83%);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.animation-laoding {
+  animation: loading infinite normal;
+}
+@keyframes loading {
+  0% {
+    opacity: 0;
   }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  100% {
+    opacity: 100;
+  }
 }
